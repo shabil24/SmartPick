@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/ivPhone"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_phone_laptop" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp">
+
+        <TextView
+            android:id="@+id/tvMerek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Merek HP"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tersedia"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvHarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 0"
+            android:textColor="#FCA224"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFavorite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Favorite"
+            android:textColor="@color/black"
+            app:cornerRadius="16dp"
+            app:backgroundTint="#4AFA2F"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detail"
+            android:textColor="@color/black"
+            app:cornerRadius="16dp"
+            app:backgroundTint="#D9D9D9"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

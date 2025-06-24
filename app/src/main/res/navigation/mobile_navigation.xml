@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.smartpick.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <!-- Dashboard Fragment -->
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.smartpick.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+
+        <!-- Navigasi ke semua menu -->
+        <action android:id="@+id/action_dashboard_to_cari" app:destination="@id/navigation_cari" />
+        <action android:id="@+id/action_dashboard_to_favorite" app:destination="@id/navigation_favorite" />
+        <action android:id="@+id/action_dashboard_to_bandingkan" app:destination="@id/navigation_bandingkan" />
+        <action android:id="@+id/action_dashboard_to_rekomendasi" app:destination="@id/navigation_rekomendasi" />
+    </fragment>
+
+    <!-- Notifications Fragment -->
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.smartpick.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <!-- Cari Fragment -->
+    <fragment
+        android:id="@+id/navigation_cari"
+        android:name="com.smartpick.ui.menu.CariFragment"
+        android:label="Cari"
+        tools:layout="@layout/fragment_cari" />
+
+    <!-- Favorite Fragment -->
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="com.smartpick.ui.menu.FavoriteFragment"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_favorite">
+
+        <action
+            android:id="@+id/action_favorite_to_detailPhoneFragment"
+            app:destination="@id/detailPhoneFragment" />
+    </fragment>
+
+    <!-- Bandingkan Fragment -->
+    <fragment
+        android:id="@+id/navigation_bandingkan"
+        android:name="com.smartpick.ui.BandingkanFragment"
+        android:label="Bandingkan"
+        tools:layout="@layout/fragment_bandingkan">
+
+        <action
+            android:id="@+id/action_bandingkan_to_detailPhoneFragment"
+            app:destination="@id/detailPhoneFragment" />
+    </fragment>
+
+    <!-- Rekomendasi Fragment -->
+    <fragment
+        android:id="@+id/navigation_rekomendasi"
+        android:name="com.smartpick.ui.menu.RekomendasiFragment"
+        android:label="Rekomendasi"
+        tools:layout="@layout/fragment_rekomendasi">
+
+        <action
+            android:id="@+id/action_rekomendasi_to_detailPhoneFragment"
+            app:destination="@id/detailPhoneFragment" />
+    </fragment>
+
+    <!-- Detail Phone Fragment -->
+    <fragment
+        android:id="@+id/detailPhoneFragment"
+        android:name="com.smartpick.ui.detail.DetailPhoneFragment"
+        android:label="Detail Phone"
+        tools:layout="@layout/fragment_detail_phone">
+        <argument
+            android:name="phone"
+            app:argType="com.smartpick.model.Phone" />
+    </fragment>
+
+    <!-- Compare Result Fragment -->
+    <fragment
+        android:id="@+id/compareResultFragment"
+        android:name="com.smartpick.ui.CompareResultFragment"
+        android:label="Hasil Perbandingan"
+        tools:layout="@layout/fragment_compare_result">
+
+        <argument
+            android:name="selectedPhones"
+            app:argType="com.smartpick.model.Phone"
+            app:nullable="false" />
+
+    </fragment>
+
+    <!-- Tambahkan action dari Bandingkan ke CompareResult -->
+    <action
+        android:id="@+id/action_bandingkan_to_compareResultFragment"
+        app:destination="@id/compareResultFragment" />
+
+
+</navigation>

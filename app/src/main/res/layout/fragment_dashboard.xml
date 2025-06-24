@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#820000">
+
+    <!-- Layout vertikal utama -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="16dp">
+
+        <!-- Judul -->
+        <TextView
+            android:id="@+id/tvJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SmartPick"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="48dp" />
+
+        <!-- Garis horizontal -->
+        <View
+            android:layout_width="140dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/white" />
+
+        <!-- Bar horizontal untuk 4 menu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:padding="16dp">
+
+            <!-- Item: Cari -->
+            <LinearLayout
+                android:id="@+id/edtCari"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/logo_cari" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mencari HP"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#fff" />
+            </LinearLayout>
+
+            <!-- Item: Favorit -->
+            <LinearLayout
+                android:id="@+id/edtFavorite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/logo_favorite" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Favorit"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#fff" />
+            </LinearLayout>
+
+            <!-- Item: Bandingkan -->
+            <LinearLayout
+                android:id="@+id/edtBanding"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/logo_bandingkan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bandingkan"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#fff" />
+            </LinearLayout>
+
+            <!-- Item: Rekomendasi -->
+            <LinearLayout
+                android:id="@+id/edtRekomendasi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/logo_rekomendasi" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rekomendasi"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#fff" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Gambar di bawah menu -->
+        <ImageView
+            android:id="@+id/bgImageCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_dashboard"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
+
+</FrameLayout>

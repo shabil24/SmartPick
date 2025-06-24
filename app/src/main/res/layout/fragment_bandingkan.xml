@@ -1,0 +1,77 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_marginTop="32dp"
+        android:text="Bandingkan Produk"
+        android:textSize="24dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Panel filter atau pemilih produk -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_white_background"
+        android:padding="8dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pilih hingga 3 produk untuk dibandingkan secara detail" />
+
+    </LinearLayout>
+
+    <!-- Panel filter atau pemilih produk -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_white_background"
+        android:padding="8dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pilih Produk" />
+
+        <Button
+            android:id="@+id/btnCompareNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bandingkan Sekarang"
+            android:backgroundTint="#00C853"
+            android:textColor="#FFF"/>
+    </LinearLayout>
+
+    <!-- Grid daftar produk -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCompare"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Container untuk hasil perbandingan -->
+    <LinearLayout
+        android:id="@+id/comparisonContainer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="12dp"/>
+</LinearLayout>
